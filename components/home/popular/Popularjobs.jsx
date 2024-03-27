@@ -16,6 +16,7 @@ import { useMockBaseData } from "../../../hooks/useMockBaseData";
 
 const Popularjobs = () => {
   const router = useRouter();
+  const [selectedJob, setSelectedJob] = useState();
 
   // Реальный запрос к бэку
   //   const { data, error, isLoading } = useFetch("search", {
@@ -51,7 +52,11 @@ const Popularjobs = () => {
             showsHorizontalScrollIndicator={false}
             data={data}
             renderItem={({ item }) => (
-              <PopularJobCard item={item} handleCardPress={handleCardPress} />
+              <PopularJobCard
+                item={item}
+                selectedJob={selectedJob}
+                handleCardPress={handleCardPress}
+              />
             )}
             keyExtractor={(item) => item?.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
