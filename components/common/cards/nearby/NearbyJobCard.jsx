@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import { checkImageURL } from "../../../../utils";
 
 import styles from "./nearbyjobcard.style";
+import { router } from "expo-router";
 
 const NearbyJobCard = ({ job, handleNavigate }) => {
   return (

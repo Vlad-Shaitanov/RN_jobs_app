@@ -1,5 +1,11 @@
-import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
-import { useRouter } from "expo-router";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ActivityIndicator,
+  Pressable,
+} from "react-native";
+import { useRouter, Link } from "expo-router";
 import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
 
 import styles from "./nearbyjobs.style";
